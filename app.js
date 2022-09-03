@@ -47,3 +47,19 @@ const loadThisIdNews = async category_id => {
     console.log(error);
   }
 };
+
+// display news for a specific category
+const displayNewsByCategory = news => {
+  if (news.length === 0) {
+    document.getElementById('dropdown-container').classList.add('hidden');
+    toggleSpinner(false);
+
+    displayTotalNewsFound(0, 'Culture');
+  }
+
+  news = news.sort((a, b) => b.total_view - a.total_view);
+
+  const newsContainer = document.getElementById('news-container');
+  newsContainer.textContent = '';
+
+  let count = 0;
