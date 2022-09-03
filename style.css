@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(250, 243, 243);
+}
+#news-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+#news-container ul li{
+ list-style: none;
+ padding:5px ;
+ text-decoration: none;
+}
+#news-container ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
